@@ -1,5 +1,5 @@
 # standardizing_names
-This is my attempt to create a practical problem in SQL and a solution to it. I am using MySQL.
+This is my attempt to create a practical problem in SQL (that will be potentially useful for myself or others) and solve it. I am using MySQL.
 
 We have a simple table of student names and surnames. However, students registered themselves, and they entered their names randomly: some of them spelled it with all lowercase letters, others with all capitals, etc. We want to return the list of names and surnames where the first letter of each name and surname is capital while others are lowercase. 
 

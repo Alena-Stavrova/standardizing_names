@@ -1,15 +1,30 @@
-Creating a table:
-
-CREATE TABLE students (student_id int, first_name varchar(20), last_name varchar(20));
-INSERT INTO students VALUES (1, 'Ivan', 'Ivanov');
-INSERT INTO students VALUES (2, 'petr', 'petrov');
-INSERT INTO students VALUES (3, 'elena', 'lenina');
-INSERT INTO students VALUES (4, 'MIKHAIL', 'MIKHAILOV');
-INSERT INTO students VALUES (5, 'Olga', 'olgina');
-
 Problem: 
 Return the list of the names in a standardized way: the first letter of name or surname should be capital, the rest letters should be lowercase.
 Return the standardized names and surnames as two additional columns, new_first_name and new_last_name.
+
+SQL Fiddle with the database: http://sqlfiddle.com/#!9/991922
+(Scroll down to see the solution)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Solution (MySQL):
 SELECT CONCAT(UPPER(LEFT(first_name, 1)), LOWER(SUBSTRING(first_name, 2, LENGTH(first_name)))) as new_first_name, CONCAT(UPPER(LEFT(last_name, 1)), LOWER(SUBSTRING(last_name, 2, LENGTH(last_name)))) as new_last_name FROM students;
